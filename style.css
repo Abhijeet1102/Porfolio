@@ -1,0 +1,146 @@
+/* Custom Variables */
+:root {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  --dark: #212529;
+  --light: #f8f9fa;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding-top: 56px;
+  line-height: 1.6;
+}
+
+/* Section Padding */
+section {
+  padding: 5rem 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+/* Skill Items */
+.skill-item {
+  transition: transform 0.3s ease;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h4 {
+  color: var(--dark);
+}
+
+/* Progress Bars */
+.progress {
+  height: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.progress-bar {
+  font-weight: 500;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Thank You Message */
+#thankYouMessage {
+  transition: all 0.3s ease;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+}
+
+/* Social Links */
+.social-links .btn {
+  min-width: 120px;
+}
+
+/* Dark Mode */
+body[data-bs-theme="dark"] {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+body[data-bs-theme="dark"] .bg-light {
+  background-color: #1e1e1e !important;
+}
+
+body[data-bs-theme="dark"] .card,
+body[data-bs-theme="dark"] .skill-item {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+  border-color: #444;
+}
+
+body[data-bs-theme="dark"] .skill-item h4 {
+  color: #f8f9fa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+}
